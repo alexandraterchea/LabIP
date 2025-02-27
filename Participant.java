@@ -3,7 +3,13 @@ class Participant {
     private int _varsta;
     private String _nrTelefon;
     private String _email;
-
+  Participant(String name,int varsta,String nrTelefon,String email)
+  {
+      setName(name);
+      setVarsta(varsta);
+      setNrTelefon(nrTelefon);
+      setEmail(email);
+  }
     //settere
     void setName(String name){
         _name = name;
