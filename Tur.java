@@ -1,9 +1,26 @@
 import java.util.List;
 
 abstract class Tur {
-    private String nume;
-    private String ghid;
+    private String _nume;
+    private String _ghid;
     private List<Participant> participanti;
+
+    public String getName()
+    {
+        return _nume;
+    }
+    public String getGhid()
+    {
+        return _ghid;
+    }
+    public void setName(String nume)
+    {
+        _nume=nume;
+    }
+    public void setGhid(String ghid)
+    {
+        _ghid=ghid;
+    }
 
     void adaugaParticipant(Participant p) {
         participanti.add(p);
@@ -11,8 +28,8 @@ abstract class Tur {
 
     void afiseazaDetalii()
     {
-        System.out.println("Tur: " + nume);
-        System.out.println("Ghid: " + ghid);
+        System.out.println("Tur: " + getName());
+        System.out.println("Ghid: " + getGhid());
         System.out.println("Participanți:");
         for (Participant p : participanti) {
             System.out.println(" - " + p);
